@@ -169,7 +169,7 @@ namespace TableEventSimulator
                 {   //Serialize the object to JSON                
                     var message = JsonConvert.SerializeObject(tdata);
                     //Display the message in the console
-                    Console.WriteLine($"Sending message: {message}");
+                    Console.WriteLine($"Sending message {i.ToString()}: {message}");
                     //Async send of the data to the event hub using the EventData method.
                     await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(message)));
                 }
